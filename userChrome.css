@@ -1,0 +1,48 @@
+/** @format */
+
+@charset "UTF-8";
+@import url("./styles//chrome//auto_devtools_theme_for_rdm.css");
+
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
+  :root {
+    --toolbar-bgcolor: black !important;
+    --uc-menu-bkgnd: black !important;
+    --arrowpanel-background: black !important;
+    --autocomplete-popup-background: black !important;
+    --uc-menu-disabled: rgb(90, 90, 90) !important;
+    --lwt-toolbar-field-focus: black !important;
+  }
+
+  /* ! Hide Tabs Toolbar */
+  #TabsToolbar {
+    display: none;
+  }
+
+  #sidebar-box {
+    --sidebar-background-color: black !important;
+    border: 0px !important;
+  }
+
+  window.sidebar-panel {
+    --lwt-sidebar-background-color: black !important;
+    border: 0px !important;
+  }
+
+  #sidebar-header {
+    margin-top: 40px !important;
+    display: none !important;
+    border: 0px !important;
+  }
+
+  /* Hide splitter, when using Tree Style Tab. */
+  #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+    + #sidebar-splitter {
+    display: none !important;
+  }
+
+  #sidebar {
+    background-color: black !important;
+    color: white !important;
+  }
+}
