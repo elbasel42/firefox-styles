@@ -1,0 +1,320 @@
+/* ============================= */
+/* Theme: minimal */
+/* – URL bar is one line
+   – All browser elements use white text on black background
+   – Optimized for vertical tabs (tree style)
+   – Autohide sidebar set as an absolute overlay
+   – Horizontal tabs are hidden
+   – Modern, minimal & compact look
+*/
+@import url("../styles/chrome/autohide_sidebar.css");
+@import url("../styles/chrome/autohide_tabstoolbar_v2.css");
+@import url("../styles/chrome/minimal_in-UI_scrollbars.css");
+@import url("../styles/chrome/minimal_text_fields.css");
+@import url("../styles/chrome/minimal_toolbarbuttons.css");
+@import url("../styles/chrome/minimal_toolbarbuttons_v2.css");
+@import url("../styles/chrome/minimal_toolbarbuttons_v3.css");
+@import url("../styles/chrome/vertical_tabs.css");
+@import url("../styles/chrome/compact_urlbar_megabar.css");
+
+/* Custom minimal CSS rules */
+:root {
+  --text-color: #fff;
+  --background-color: #000;
+}
+#urlbar {
+  white-space: nowrap;
+}
+#sidebar {
+  position: absolute;
+}
+#horizontal-tabs {
+  display: none;
+}
+
+/* ============================= */
+/* Theme: classic */
+/* Traditional Firefox look with classic menu and grid popup */
+@import url("../styles/chrome/classic_firefox_menu_button.css");
+@import url("../styles/chrome/classic_grid_main_menu_popup.css");
+@import url("../styles/chrome/bookmarks_below_content.css");
+@import url("../styles/chrome/click_selected_tab_to_focus_urlbar.css");
+
+/* Custom classic CSS */
+body {
+  font-family: serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* ============================= */
+/* Theme: modern */
+/* A sleek, modern style with integrated search and streamlined toolbar buttons */
+@import url("../styles/chrome/compact_proton.css");
+@import url("../styles/chrome/integrated_searchbar_popup.css");
+@import url("../styles/chrome/toolbarbuttons_icon+label.css");
+@import url("../styles/chrome/reload_button_in_urlbar.css");
+
+/* Custom modern CSS */
+#main-toolbar,
+#urlbar {
+  border: none;
+  background-color: #eaeaea;
+}
+button {
+  border-radius: 4px;
+}
+
+/* ============================= */
+/* Theme: dark-mode */
+/* Emphasizes a dark UI using dark checkboxes, radios and variable templates */
+@import url("../styles/chrome/dark_checkboxes_and_radios.css");
+@import url("../styles/chrome/color_variable_template.css");
+@import url("../styles/chrome/proton_dark_light_notifications.css");
+
+/* Custom dark-mode CSS */
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #ddd;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ============================= */
+/* Theme: compact */
+/* A reduced, compact interface ideal for smaller screens */
+@import url("../styles/chrome/compact_extensions_panel.css");
+@import url("../styles/chrome/compact_urlbar_megabar.css");
+@import url("../styles/chrome/minimal_text_fields.css");
+
+/* Custom compact CSS */
+body {
+  padding: 2px;
+}
+#toolbar {
+  margin: 0;
+}
+
+/* ============================= */
+/* Theme: grid */
+/* Utilizes grid-based layouts for toolbars and menus */
+@import url("../styles/chrome/grid_overflow_menu.css");
+@import url("../styles/chrome/multi-row_oneliner_combo_patch.css");
+@import url("../styles/chrome/multi-row_main_toolbar.css");
+
+/* Custom grid CSS */
+#main-toolbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+/* ============================= */
+/* Theme: vertical-plus */
+/* Emphasizes vertical layout elements and a stacked menubar */
+@import url("../styles/chrome/vertical_tabs.css");
+@import url("../styles/chrome/vertical_urlbar_one-off_items.css");
+@import url("../styles/chrome/vertical_menubar.css");
+
+/* Custom vertical-plus CSS */
+#urlbar {
+  margin-left: 0;
+}
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================= */
+/* Theme: iconized */
+/* Focuses on icon-only menus and toolbars for a cleaner interface */
+@import url("../styles/chrome/icon_only_tabs.css");
+@import url("../styles/chrome/iconized_main_menu.css");
+@import url("../styles/chrome/iconized_places_context_menu.css");
+@import url("../styles/chrome/inline_tab_audio_icons.css");
+
+/* Custom iconized CSS */
+.icon {
+  font-size: 0;
+} /* Hide text labels */
+#menu,
+#toolbar {
+  padding: 0;
+}
+
+/* ============================= */
+/* Theme: floating */
+/* Uses floating elements for toolbars and overlays for a dynamic feel */
+@import url("../styles/chrome/floating_findbar_on_top.css");
+@import url("../styles/chrome/overlay_fullscreen_toolbars.css");
+@import url("../styles/chrome/overlay_menubar.css");
+
+/* Custom floating CSS */
+#floating-elements {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+/* ============================= */
+/* Theme: streamlined */
+/* Hides redundant elements for a very clean, streamlined UI */
+@import url("../styles/chrome/hide_tabs_toolbar.css");
+@import url("../styles/chrome/hide_tabs_toolbar_v2.css");
+@import url("../styles/chrome/hide_urlbar_first_row.css");
+
+/* Custom streamlined CSS */
+#redundant-elements {
+  display: none;
+}
+
+/* ============================= */
+/* Theme: unified */
+/* Combines toolbars and menus for a cohesive look */
+@import url("../styles/chrome/combined_tabs_and_main_toolbars.css");
+@import url("../styles/chrome/menubar_in_tabs_toolbar.css");
+@import url("../styles/chrome/round_ui_items.css");
+
+/* Custom unified CSS */
+#combined-toolbar {
+  border: 1px solid #ccc;
+}
+
+/* ============================= */
+/* Theme: vibrant */
+/* Uses glowing button effects and animated gradients for a lively UI */
+@import url("../styles/chrome/button_effect_icon_glow.css");
+@import url("../styles/chrome/tabs_animated_gradient_border.css");
+@import url("../styles/chrome/page_action_buttons_on_hover.css");
+
+/* Custom vibrant CSS */
+button {
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+#tabs {
+  background: linear-gradient(45deg, #ff6, #f06);
+}
+
+/* ============================= */
+/* Theme: shadow */
+/* Adds depth with rounded elements and shadows */
+@import url("../styles/chrome/round_caption_buttons.css");
+@import url("../styles/chrome/round_ui_items.css");
+@import url("../styles/chrome/rounded_menupopups.css");
+
+/* Custom shadow CSS */
+#menupopups {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* Theme: crisp */
+/* Sharp and defined with scrollable popups and clear tab borders */
+@import url("../styles/chrome/scrollable_urlbar_popup.css");
+@import url("../styles/chrome/selected_tab_gradient_border.css");
+@import url("../styles/chrome/textual_context_navigation.css");
+
+/* Custom crisp CSS */
+#urlbar-popup {
+  border: 1px solid #999;
+}
+.tab {
+  border-right: 1px solid #ccc;
+}
+
+/* ============================= */
+/* Theme: focus */
+/* Enhances focus indicators and scaling effects on click */
+@import url("../styles/chrome/click_selected_tab_to_focus_urlbar.css");
+@import url("../styles/chrome/status_inside_urlbar.css");
+@import url("../styles/chrome/tab_effect_scale_onclick.css");
+
+/* Custom focus CSS */
+:focus {
+  outline: 2px solid #0078d7;
+}
+
+/* ============================= */
+/* Theme: toolbarless */
+/* Minimizes toolbar display for an uncluttered view */
+@import url("../styles/chrome/hide_tabs_toolbar_w_alltabs_button.css");
+@import url("../styles/chrome/hide_toolbox_top_bottom_borders.css");
+@import url("../styles/chrome/show_window_title_in_menubar.css");
+
+/* Custom toolbarless CSS */
+#toolbar {
+  display: none;
+}
+#menubar {
+  padding: 4px;
+}
+
+/* ============================= */
+/* Theme: blend */
+/* Blends multi-row layouts with overlay elements for a unified style */
+@import url("../styles/chrome/multi-row_tabs.css");
+@import url("../styles/chrome/overlay_sidebar_header.css");
+@import url("../styles/chrome/drag_window_from_urlbar.css");
+
+/* Custom blend CSS */
+#sidebar {
+  opacity: 0.9;
+}
+#window-drag {
+  cursor: move;
+}
+
+/* ============================= */
+/* Theme: serene */
+/* Centers elements for a calm, balanced interface */
+@import url("../styles/chrome/centered_statuspanel.css");
+@import url("../styles/chrome/centered_tab_content.css");
+@import url("../styles/chrome/centered_tab_label.css");
+
+/* Custom serene CSS */
+#statuspanel,
+#tab-content,
+#tab-label {
+  text-align: center;
+  margin: auto;
+}
+
+/* ============================= */
+/* Theme: dynamic */
+/* Emphasizes dynamic loading animations and progress indicators */
+@import url("../styles/chrome/tab_loading_progress_bar.css");
+@import url("../styles/chrome/tab_loading_progress_throbber.css");
+@import url("../styles/chrome/tab_line_loading_indicator.css");
+
+/* Custom dynamic CSS */
+.loading-indicator {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+/* ============================= */
+/* Theme: custom-explorer */
+/* For interactive exploration with hover effects and dynamic bookmarks */
+@import url("../styles/chrome/button_effect_scale_onhover.css");
+@import url("../styles/chrome/newtab_button_always_on_hover.css");
+@import url("../styles/chrome/menulike_bookmarks_folder_popups.css");
+@import url("../styles/chrome/toolbarbuttons_in_tabs_periphery.css");
+
+/* Custom custom-explorer CSS */
+#bookmarks-folder {
+  transition: all 0.3s ease;
+}
+#bookmarks-folder:hover {
+  transform: scale(1.05);
+}

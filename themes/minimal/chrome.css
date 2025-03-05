@@ -1,0 +1,38 @@
+@import url("../styles/chrome/autohide_urlbar.css");
+@import url("../styles/chrome/urlbar_centered_text.css");
+@import url("../styles/chrome/urlbar_visible_on_active_tab_click.css");
+@import url("../styles/chrome/vertical_tabs.css");
+
+/* Custom styles for white text/icons on black background */
+:root {
+  --toolbar-bgcolor: #000;
+  --toolbar-color: #fff;
+  --toolbar-icon-color: #fff;
+}
+
+#navigator-toolbox {
+  background-color: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+}
+
+#navigator-toolbox .toolbarbutton-icon {
+  fill: var(--toolbar-icon-color) !important;
+}
+
+#TabsToolbar {
+  background-color: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+}
+
+#TabsToolbar .toolbarbutton-icon {
+  fill: var(--toolbar-icon-color) !important;
+}
+
+#urlbar {
+  background-color: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+}
+
+#urlbar .toolbarbutton-icon {
+  fill: var(--toolbar-icon-color) !important;
+}

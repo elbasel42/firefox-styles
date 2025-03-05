@@ -1,4 +1,7 @@
 /** @format */
 @charset "UTF-8";
-@import url("./themes/main/chrome.css");
-@import url("./custom/chrome.css");
+/* @import url("./themes/main/chrome.css"); */
+@import url("./themes/everything/chrome.css");
+/* @import url("./themes/minimal/chrome.css"); */
+
+/* @import url("./custom/chrome.css"); */
