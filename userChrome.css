@@ -1,7 +1,90 @@
 /** @format */
 @charset "UTF-8";
 /* @import url("./themes/main/chrome.css"); */
-@import url("./themes/everything/chrome.css");
 /* @import url("./themes/minimal/chrome.css"); */
+/* @import url("./themes/minimal-reddit/main.css"); */
+@import url("./themes/everything/chrome.css");
 
-/* @import url("./custom/chrome.css"); */
+/* Custom styles for sidebar and Tree Style Tab */
+
+/* 
+  Group 3: Sidebar container without text color.
+  Original rule for #sidebar-box with background and no border.
+*/
+#sidebar-box {
+  background-color: black !important;
+  border: none !important; /* Remove border */
+}
+
+/* 
+  Group 1: Elements that require a black background, white text, and no border.
+  This combines:
+    - #sidebar-header (first occurrence)
+    - #treestyletab-pinned-tabs and #treestyletab-tabs
+    - Sidebar boxes for history, bookmarks, and synced tabs
+*/
+#sidebar-header,
+#treestyletab-pinned-tabs,
+#treestyletab-tabs,
+#sidebar-box[sidebarcommand="viewHistorySidebar"],
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"],
+#sidebar-box[sidebarcommand="viewTabsSidebar"] {
+  background-color: black !important;
+  color: white !important;
+  border: none !important; /* Remove border */
+}
+
+/* 
+  Group 2: Elements that require only white text and no border.
+  This combines:
+    - #sidebar
+    - #sidebar-title
+    - .tab-label inside #treestyletab-tabs
+*/
+#sidebar,
+#sidebar-title,
+#treestyletab-tabs .tab-label {
+  color: white !important;
+  border: none !important; /* Remove border */
+}
+
+/* 
+  Tree Style Tab extension: Collapse header for the pinned tabs sidebar.
+  Note: The border is re-stated to ensure removal.
+*/
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
+  > #sidebar-header {
+  visibility: collapse;
+  border: none !important; /* Remove border */
+}
+
+/* 
+  Collapse header for history, bookmarks, and synced tabs sidebars.
+  Grouping similar attribute selectors to reduce repetition.
+*/
+#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header,
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header,
+#sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header {
+  visibility: collapse;
+  border: none !important; /* Remove border */
+}
+
+/**
+ * Decrease size of the sidebar header and adjust its inner elements.
+ * This rule supplements the earlier grouping for #sidebar
+
+ /**
+ * Decrease size of the sidebar header
+ */
+#sidebar-header {
+  font-size: 1.2em !important;
+  padding: 2px 6px 2px 3px !important;
+}
+#sidebar-header #sidebar-close {
+  padding: 3px !important;
+}
+#sidebar-header #sidebar-close .toolbarbutton-icon {
+  width: 14px !important;
+  height: 14px !important;
+  opacity: 0.6 !important;
+}
